@@ -1,186 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Match</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #ffcae2;
-            color: #333;
-        }
-        h1 {
-            margin-top: 20px;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 10px;
-            border: none;
-            background-color: #190919;
-            color: white;
-            border-radius: 5px;
-        }
-        input[type="text"], select {
-            padding: 10px;
-            margin: 10px 0;
-            width: 80%;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .profile-card {
-            margin-top: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-        }
-        .error-message {
-            color: red;
-            margin: 10px 0;
-        }
-        .next-button-container {
-            text-align: center; /* Center the button */
-            margin-top: 20px; /* Space above the button */
-        }
-        .next-button {
-            display: none; /* Initially hidden */
-        }
-    </style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Music Matcher</title>
+   <style>
+       body {
+           text-align: center;
+           font-family: Arial, sans-serif;
+           background-color: #ffcae2;
+           color: #333;
+       }
+       .container {
+           width: 80%;
+           margin: auto;
+           padding: 20px;
+           background: white;
+           border-radius: 10px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       }
+       button {
+           padding: 10px 20px;
+           font-size: 16px;
+           cursor: pointer;
+           margin: 10px;
+           border: none;
+           background-color: #190919;
+           color: white;
+           border-radius: 5px;
+       }
+       input[type="text"], select {
+           padding: 10px;
+           margin: 10px 0;
+           width: 80%;
+           border: 1px solid #ccc;
+           border-radius: 5px;
+       }
+       .error-message {
+           color: red;
+           margin: 10px 0;
+       }
+       .section {
+           display: none; /* Hide all sections by default */
+       }
+       .active {
+           display: block; /* Show the active section */
+       }
+   </style>
 </head>
 <body>
-    <em>
-        <h1>Hey doll👋 Welcome to the first Music Matcher!</h1>
-    </em>
-    <h3>
-        Do you ever get tired of the same genre? Tired of not finding a good song to jam to? 
-        Tired of the same song on repeat? FEAR not, it is the first of its kind! This is the TOP website to go to when you need a new beat~🎶
-        <br>If you are new here then sign up today!
-    </h3>
-    
-    <div class="container">
-        <h2>Create Your Profile</h2>
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="text" id="age" placeholder="Your Age" required>
-        
-        <input type="text" id="combo-box" placeholder="Type artist name..." list="artists-list">
-        <datalist id="artists-list">
-            <option value="Ed Sheeran"></option>
-            <option value="The Weeknd"></option>
-            <option value="Dua Lipa"></option>
-            <option value="Harry Styles"></option>
-            <option value="Billie Eilish"></option>
-            <option value="Lil Nas X"></option>
-            <option value="Justin Bieber"></option>
-            <option value="Tones and I"></option>
-            <option value="Olivia Rodrigo"></option>
-            <option value="Ariana Grande"></option>
-            <option value="Post Malone"></option>
-            <option value="Taylor Swift"></option>
-            <option value="Bruno Mars"></option>
-            <option value="Lady Gaga"></option>
-            <option value="Adele"></option>
-            <option value="Eminem"></option>
-            <option value="BTS"></option>
-            <option value="Elvis Presley"></option>
-            <option value="Michael Jackson"></option>
-            <option value="Beyonce"></option>
-            <option value="Mariah Carey"></option>
-            <option value="Justin Timberlake"></option>
-            <option value="Bob Marley"></option>
-            <option value="Drake"></option>
-            <option value="Kendrick Lamar"></option>
-            <option value="Carlos Santana"></option>
-        </datalist>
+   <br><em><h1>Hey doll👋 </h1></em></br>
+      <h1>Welcome to the first Music Matcher!</h1></em>
+   <h3>
+       Do you ever get tired of the same genre? Tired of not finding a good song to jam to?
+       Tired of the same song on repeat? FEAR not, it is the first of its kind! This is the TOP website to go to when you need a new beat~🎶
+       <br>If you are new here then sign up today!
+   </h3></em>
+  
+   <div class="container">
+       <!-- Profile Creation Section -->
+       <div id="profile-section" class="section active">
+           <h2>Create Your Profile/Sign up</h2>
+           <input type="text" id="name" placeholder="Your Name" required>
+           <input type="text" id="age" placeholder="Your Age" required>
+           <input type="text" id="combo-box" placeholder="Type artist name..." list="artists-list">
+           <datalist id="artists-list">
+               <option value="Ed Sheeran"></option>
+               <option value="The Weeknd"></option>
+               <option value="Dua Lipa"></option>
+               <option value="Harry Styles"></option>
+               <option value="Billie Eilish"></option>
+               <option value="Lil Nas X"></option>
+               <option value="Justin Bieber"></option>
+               <option value="Tones and I"></option>
+               <option value="Olivia Rodrigo"></option>
+               <option value="Ariana Grande"></option>
+               <option value="Post Malone"></option>
+               <option value="Taylor Swift"></option>
+               <option value="Bruno Mars"></option>
+               <option value="Lady Gaga"></option>
+               <option value="Adele"></option>
+               <option value="Eminem"></option>
+               <option value="BTS"></option>
+               <option value="Elvis Presley"></option>
+               <option value="Michael Jackson"></option>
+               <option value="Beyonce"></option>
+               <option value="Mariah Carey"></option>
+               <option value="Justin Timberlake"></option>
+               <option value="Bob Marley"></option>
+               <option value="Drake"></option>
+               <option value="Kendrick Lamar"></option>
+               <option value="Carlos Santana"></option>
+           </datalist>
+           <select id="music-genre" required>
+               <option value="">Select your basic genre</option>
+               <option value="pop">Pop</option>
+               <option value="rock">Rock</option>
+               <option value="jazz">Jazz</option>
+               <option value="classical">Classical</option>
+               <option value="hip-hop">Hip-Hop</option>
+               <option value="country">Country</option>
+               <option value="rap">Rap</option>
+               <option value="blues">Blues</option>
+               <option value="folk">Folk</option>
+           </select>
+           <button onclick="createProfile()">Create Profile</button>
+           <div class="error-message" id="error-message"></div>
+       </div>
 
-        <select id="music-genre" required>
-            <option value="">Select your basic genre</option>
-            <option value="pop">Pop</option>
-            <option value="rock">Rock</option>
-            <option value="jazz">Jazz</option>
-            <option value="classical">Classical</option>
-            <option value="hip-hop">Hip-Hop</option>
-            <option value="country">Country</option>
-            <option value="rap">Rap</option>
-            <option value="blues">Blues</option>
-            <option value="rhythm">Rhythm</option>
-            <option value="folk">Folk</option>
-        </select>
-        
-        <button onclick="createProfile()">Create Profile</button>
 
-        <div class="error-message" id="error-message"></div>
-        <div id="profile-results"></div>
-        
-        <div class="next-button-container">
-            <button class="next-button" id="next-button" onclick="goToNextPage()">Next</button>
-        </div>
-    </div>
+       <!-- Genre Selection Section -->
+       <div id="genre-section" class="section">
+           <h1>Find Your Next Favorite Genre and Artist!</h1>
+           <div id="profile-info"></div>
+           <button onclick="generateRandomSelection()">Get Random Genre and Artist!</button>
+           <div class="result" id="result"></div>
+       </div>
+   </div>
 
-    <script>
-        let profiles = [];
 
-        function createProfile() {
-            const name = document.getElementById('name').value;
-            const age = document.getElementById('age').value;
-            const genre = document.getElementById('music-genre').value;
-            const artist = document.getElementById('combo-box').value;
+   <script>
+       let profile = {};
+      
+       const genres = ["pop", "rock", "jazz", "classical", "hip-hop", "country", "rap", "blues", "folk"];
+       const artists = [
+           "The Weeknd", "Ed Sheeran", "Ariana Grande", "Elvis Presley",
+           "Billie Eilish", "Taylor Swift", "Drake", "Beyonce"
+       ];
 
-            const errorMessage = document.getElementById('error-message');
-            const nextButton = document.getElementById('next-button');
-            errorMessage.innerText = ''; // Clear previous messages
 
-            if (!name || !age || !genre || !artist) {
-                errorMessage.innerText = "Woah there! Before we proceed, we just need a little bit of information before we can find you a new beat!";
-                nextButton.style.display = 'none'; // Hide Next button if validation fails
-                return; // Stop further execution
-            }
+       function createProfile() {
+           const name = document.getElementById('name').value;
+           const age = document.getElementById('age').value;
+           const genre = document.getElementById('music-genre').value;
+           const artist = document.getElementById('combo-box').value;
 
-            const profile = { name, age, genre, artist };
-            profiles.push(profile);
-            displayProfiles();
-            clearForm();
-            nextButton.style.display = 'block'; // Show Next button after successful profile creation
-        }
 
-        function displayProfiles() {
-            const profileResults = document.getElementById('profile-results');
-            profileResults.innerHTML = '';
+           const errorMessage = document.getElementById('error-message');
+           errorMessage.innerText = ''; // Clear previous messages
 
-            profiles.forEach(profile => {
-                const card = document.createElement('div');
-                card.className = 'profile-card';
-                card.innerHTML = `<strong>Name:</strong> ${profile.name}<br>
-                                  <strong>Age:</strong> ${profile.age}<br>
-                                  <strong>Favorite Genre:</strong> ${profile.genre}<br>
-                                  <strong>Favorite Artist:</strong> ${profile.artist}`;
-                profileResults.appendChild(card);
-            });
-        }
 
-        function clearForm() {
-            document.getElementById('name').value = '';
-            document.getElementById('age').value = '';
-            document.getElementById('music-genre').value = '';
-            document.getElementById('combo-box').value = '';
-        }
+           if (!name || !age || !genre || !artist) {
+               errorMessage.innerText = "Woah there! Before we proceed, we just need a little bit of information before we can find you a new beat!";
+               return; // Stop further execution
+           }
 
-        function goToNextPage() {
-            window.location.href = 'nextpage.html'; // Redirects to the next page
-        }
-    </script>
+
+           // Store profile data
+           profile = { name, age, genre, artist };
+           displayProfileInfo();
+           switchSection('genre-section'); // Move to genre selection section
+       }
+
+
+       function displayProfileInfo() {
+           const profileInfo = document.getElementById('profile-info');
+           profileInfo.innerHTML = `
+               <strong>Name:</strong> ${profile.name}<br>
+               <strong>Age:</strong> ${profile.age}<br>
+               <strong>Favorite Genre:</strong> ${profile.genre}<br>
+               <strong>Favorite Artist:</strong> ${profile.artist}
+           `;
+       }
+
+
+       function switchSection(sectionId) {
+           // Hide all sections
+           document.querySelectorAll('.section').forEach(section => {
+               section.classList.remove('active');
+           });
+           // Show the selected section
+           document.getElementById(sectionId).classList.add('active');
+       }
+
+
+       function generateRandomSelection() {
+           const randomGenre = genres[Math.floor(Math.random() * genres.length)];
+           const randomArtist = artists[Math.floor(Math.random() * artists.length)];
+           const resultDiv = document.getElementById('result');
+           resultDiv.innerHTML = `
+               Awesome, your results are in!<br>
+               Here is your new genre: <strong>${randomGenre}</strong>!<br>
+               and this is your new artist: <strong>${randomArtist}</strong>!
+           `;
+       }
+   </script>
 </body>
 </html>
-
-
-
